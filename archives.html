@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h1 class="page-title">Archives</h1>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <code class="date">{{ post.date | date_to_string }}</code>
+        »
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>

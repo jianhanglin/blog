@@ -1,0 +1,15 @@
+name: Song Ziming's Blog
+
+exclude: [README.md, LICENSE]
+
+baseurl: /
+
+permalink: none
+
+highlighter: pygments
+
+paginate: 8
+
+markdown: pandoc
+pandoc:
+    extensions: [smart, mathjax]
