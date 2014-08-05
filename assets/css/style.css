@@ -16,7 +16,7 @@
 /* Main style */
 body {
     font-family: 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
-    font-size: 18px;
+    font-size: 17.4px;
     line-height: 1.4;
     color: #333;
     border-top: 4px solid #556270;
@@ -51,7 +51,7 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    margin-top: 0.6em;
+    margin-top: 0.8em;
     margin-bottom: 0.3em;
 }
 h1 { font-size: 40px; }
@@ -60,8 +60,11 @@ h3 { font-size: 26px; }
 h4 { font-size: 22px; }
 h5 { font-size: 20px; }
 h6 { font-size: 18px; }
-p, ul, ol, table, pre {
-    margin-top: 0.7em;
+p {
+    margin: 0.7em 0;
+}
+ul, ol, table, pre {
+    margin: 0.2em 0;
 }
 ol, ul {
     list-style-type: disc;

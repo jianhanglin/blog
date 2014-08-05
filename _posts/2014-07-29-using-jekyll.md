@@ -28,7 +28,7 @@ pandoc:
 
 首先需要在jekyll-pandoc-plugin配置中启用MathJax扩展，并在模板文件中添加MathJax CDN的引用：
 
-~~~{.html}
+~~~ {.html}
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 ~~~
 
