@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 使用Jekyll搭建静态博客
+category: "blog"
 ---
 
 > Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
@@ -34,8 +35,10 @@ pandoc:
 
 这样，在Markdown中就可以直接嵌入LaTeX公式了，例如：
 
-$$ G_{\mu \nu} = 8\pi G(T_{\mu \nu}+\rho_{\Lambda}g_{\mu \nu}) $$
-$$ \int_a^b f'(x)dx = f(b) - f(a) $$
+$$ \begin{align*}
+G_{\mu \nu} &= 8\pi G(T_{\mu \nu}+\rho_{\Lambda}g_{\mu \nu}) \\
+\int_a^b f'(x)dx &= f(b) - f(a)
+\end{align*} $$
 
 ### 使用DISQUS实现用户评论
 

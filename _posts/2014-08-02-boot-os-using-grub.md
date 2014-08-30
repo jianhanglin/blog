@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 使用GRUB引导自己的系统
+category: osdev
 ---
 GRUB是一个强大的引导程序，使用GRUB引导自己的操作系统可以省去许多繁杂的初始化工作，让内核一开始就运行在保护模式下。GRUB遵循Multiboot规范，任何具有Multiboot header的文件都可以被GRUB加载并引导。
 

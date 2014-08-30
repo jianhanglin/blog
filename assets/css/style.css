@@ -15,7 +15,7 @@
 /* ========================================================================== */
 /* Main style */
 body {
-    font-family: 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', SimSun, sans-serif;
     font-size: 17.4px;
     line-height: 1.4;
     color: #333;
@@ -25,7 +25,7 @@ body {
 header {
     background-color: #eee;
 }
-main {
+.main {
     max-width: 720px;
     margin: 0 auto;
 }
@@ -66,8 +66,13 @@ p {
 ul, ol, table, pre {
     margin: 0.2em 0;
 }
-ol, ul {
+ol {
+    list-style-type: decimal;
+}
+ul {
     list-style-type: disc;
+}
+ol, ul {
     font-size: 94%;
 }
 ol ol, ul ul {
@@ -177,3 +182,9 @@ section > h4 {
 footer > p {
     margin-top: 0.3em;
 }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

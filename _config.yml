@@ -1,6 +1,6 @@
 name: Song Ziming's Blog
 
-exclude: [README.md, LICENSE]
+exclude: [README.md, LICENSE, tikz.py]
 
 baseurl: /
 
@@ -13,3 +13,4 @@ paginate: 8
 markdown: pandoc
 pandoc:
     extensions: [smart, mathjax]
+

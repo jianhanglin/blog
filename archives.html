@@ -2,12 +2,34 @@
 layout: default
 ---
 <h1 class="page-title">Archives</h1>
+{% for cat in site.categories %}
+<section>
+<h4>{{ cat | first }}</h4>
 <ul>
     {% for post in site.posts %}
+    {% if post.category == cat[0] %}
     <li>
         <code class="date">{{ post.date | date_to_string }}</code>
         »
         <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
+</section>
+{% endfor %}
+
+<section>
+<h4>uncategorized</h4>
+<ul>
+    {% for post in site.posts %}
+    {% if post.category == null %}
+    <li>
+        <code class="date">{{ post.date | date_to_string }}</code>
+        »
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</section>

@@ -57,11 +57,18 @@ module Jekyll
                     raise FatalException.new("Missing dependency: pandoc-ruby")
                 end
 
+                # takes raw content as the input, return a string.
                 def convert(content)
-                    extensions = config_option('extensions', [])
-                    format = config_option('format', 'html5')
-
-                    PandocRuby.new(content, *extensions).send("to_#{format}")
+                    #extensions = config_option('extensions', [])
+                    #format = config_option('format', 'html5')
+                    #PandocRuby.new(content, *extensions, {"filter" => "./tikz.py"}).send("to_#{format}")
+                    output = ''
+                    Open3::popen3("pandoc -f markdown -t html5 -S --mathjax --filter ./tikz.py") do |stdin, stdout, stderr|
+                        stdin.puts content
+                        stdin.close
+                        output = stdout.read
+                    end
+                    output
                 end
 
                 def config_option(key, default=nil)
