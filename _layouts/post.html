@@ -2,7 +2,10 @@
 layout: default
 ---
 <h1 class="article-title">{{ page.title }}</h1>
-<p class="date">{{ page.date | date_to_string }}</p>
+<p class="date"><span class="fa fa-clock-o fa-fw"></span> {{ page.date | date_to_string }}</p>
+<p class="tags"><span class="fa fa-tag fa-fw"></span> {% for tag in page.tags %}
+	<code>{{ tag }}</code>
+{% endfor %}</p>
 <article>
     {{ content }}
 </article>

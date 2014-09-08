@@ -2,6 +2,10 @@
 layout: post
 title: PDF文件格式——对象
 category: pdf
+tags:
+- pdf
+- object
+- format
 ---
 PDF（Portable Document Format）是一种神奇的文档格式，能够在不同分辨率下呈现出一致的显示效果。实际上，PDF是一种编程语言，一个PDF文件就是一份PDF语言程序，一个PDF Viewer都是一个PDF语言的解释器。
 

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: 字体提示
+tags:
+- font
+- hinting
 ---
 ### 起因
 

@@ -2,6 +2,9 @@
 layout: post
 title: 使用Jekyll搭建静态博客
 category: "blog"
+tags:
+- jekyll
+- blog
 ---
 
 > Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.

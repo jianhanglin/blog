@@ -1,4 +1,22 @@
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}/*#yui3*/-css-stamp.cssreset{display:none}
+
 /* Fonts */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    /*font-weight: 300;*/
+    font-weight:400;
+    /*src: local('Roboto Light'), local('Roboto-Light'), url(roboto_light.woff2) format('woff2');*/
+    src: url(roboto_light.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: bold;
+    /*font-weight: 400;*/
+    font-weight: 700;
+    /*src: local('Roboto Regular'), local('Roboto-Regular'), url(roboto.woff2) format('woff2');*/
+    src: url(roboto.woff2) format('woff2');
+}
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -14,14 +32,254 @@
 
 /* ========================================================================== */
 /* Main style */
+* {
+    margin: 0 auto;
+}
 body {
-    font-family: 'Open Sans', Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', SimSun, sans-serif;
-    font-size: 17.4px;
-    line-height: 1.4;
+    background-color: #fff;
     color: #333;
+    font-family: Roboto, Helvetica, Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', SimSun, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
     border-top: 4px solid #556270;
     border-bottom: 4px solid #556270;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+}
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 20px; }
+h6 { font-size: 18px; }
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+p {
+    margin: 0.7em 0;
+}
+a {
+    color: #08c;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul, ol, table, pre {
+    margin: 0.2em 0;
+}
+ol {
+    list-style-type: decimal;
+}
+ul {
+    list-style-type: disc;
+}
+ol, ul {
+    font-size: 96%;
+}
+li {
+    margin-left: 5%;
+}
+
+table {
+    min-width: 60%;
+    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    background: #fff;
+    border-collapse: separate;
+    font-size: 94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th {
+    background: #eee;
+    text-align: center;
+    padding: 1px 20px;
+    font-size: 100%;
+    font-weight: bold;
+}
+td {
+    text-align: center;
+    padding: 1px 20px;
+}
+tr:nth-child(even) {
+    background: #f7f8f9;
+}
+
+blockquote {
+    padding-left: 0.6em;
+    border-left: 4px solid #777;
+    color: #777;
+    font-size: 96%;
+}
+
+pre {
+    margin: 0.6em 0;
+    padding: 0.5em;
+    color: #333;
+    background: #eee;
+    overflow: auto;
+    font-size: 90%;
+}
+code {
+    padding: 0 0.3em;
+    color: #000551;
+    background: #f6ecff;
+    font-family: 'Courier New', Courier, Monospace, sans-serif;
+}
+pre code {
+    padding: 0;
+    color: inherit;
+    background: inherit;
+    line-height: 1.0;
+}
+
+@media (min-width: 800px) {
+    .wrapper {
+        /* width: 720px; */
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 640px) and (max-width: 800px) {
+    .wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 640px) {
+    .wrapper {
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.date, .tags {
+    font-size: 94%;
+    margin: 0;
+}
+
+/* ========== Header and footer ========== */
+.header {
+    background-color: #eee;
+}
+.navigator {
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+}
+ul.navigator {
+    list-style-type: none;
+    line-height: 30px;
+    font-size: 22px;
+}
+/*
+ul.navigator li:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    width: 30px;
+}
+li.home:before {
+    content: "\f015";
+}
+li.list:before {
+    content: "\f0ca";
+}
+li.info:before {
+    content: "\f05a";
+}
+*/
+@media (min-width: 620px) {
+    ul.navigator li {
+        display: inline;
+        margin: 0 20px 0 0;
+        text-transform: uppercase;
+    }
+}
+@media (not min-width: 620px) {
+    ul.navigator li {
+        /* display: inline; */
+        margin: 0 20px 0 0;
+        text-transform: uppercase;
+    }
+}
+.navigator a {
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 28px;
+    font-size: 92%;
+}
+.footer p {
+    margin-top: 0.3em;
+}
+
+
+.sourceCode .kw { color: #268BD2; }
+.sourceCode .dt { color: #268BD2; }
+.sourceCode .dv, .sourceCode .bn, .sourceCode .fl { color: #D33682; }
+.sourceCode .ch { color: #DC322F; }
+.sourceCode .st { color: #2AA198; }
+.sourceCode .co { color: #93A1A1; }
+.sourceCode .ot { color: #A57800; }
+.sourceCode .al { color: #CB4B16; font-weight: bold; }
+.sourceCode .fu { color: #268BD2; }
+.sourceCode .re { }
+.sourceCode .er { color: #D30102; font-weight: bold; }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 header {
     background-color: #eee;
 }
@@ -92,7 +350,7 @@ blockquote {
     font-size: 94%;
 }
 
-/* table */
+
 table {
 	min-width: 60%;
 	border-top: 2px solid #ccc;
@@ -119,7 +377,7 @@ tr:nth-child(even) {
 	background: #f7f8f9;
 }
 
-/* code */
+
 pre {
     margin: 0.6em 0;
     padding: 0.5em;
@@ -141,7 +399,7 @@ pre code {
     line-height: 1.0;
 }
 
-/* highlighter */
+
 .sourceCode .kw { color: #268BD2; }
 .sourceCode .dt { color: #268BD2; }
 .sourceCode .dv, .sourceCode .bn, .sourceCode .fl { color: #D33682; }
@@ -154,8 +412,7 @@ pre code {
 .sourceCode .re { }
 .sourceCode .er { color: #D30102; font-weight: bold; }
 
-/* ========================================================================== */
-/* special for navigator */
+/* ========================================================================== 
 header > ul {
     max-width: 720px;
     margin: 0 auto;
@@ -174,7 +431,7 @@ header > ul > li > a {
     color: #000;
 }
 
-/* index */
+
 section > h4 {
     margin-bottom: 0;
 }
@@ -188,3 +445,4 @@ img {
     margin-right: auto;
 }
 
+*/

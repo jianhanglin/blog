@@ -2,6 +2,10 @@
 layout: post
 title: KDbg源码分析
 category: qt
+tags:
+- qt
+- kdbg
+- debugger
 ---
 KDbg是一个图形化调试器前端，后端使用的是GDB。这是一个KDE桌面环境的软件，虽然KDE使用的是Qt技术，但KDE对Qt框架做了进一步的封装。
 

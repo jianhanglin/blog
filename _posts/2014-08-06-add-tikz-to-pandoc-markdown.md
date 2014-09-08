@@ -2,6 +2,10 @@
 layout: post
 title: 为Pandoc Markdown添加TikZ支持
 category: "blog"
+tags:
+- jekyll
+- pandoc
+- tikz
 ---
 Pandoc为Markdown添加了许多新特性，甚至数学公式都能借助MathJax完美地显示，然而我还想在Markdown中嵌入TikZ代码，这样画图也不需要使用单独软件了。
 

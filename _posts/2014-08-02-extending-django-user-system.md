@@ -1,6 +1,11 @@
 ---
 layout: post
 title: 扩展Django用户系统
+tags:
+- django
+- python
+- user system
+- web dev
 ---
 Django内置的用户系统极大地减少了开发者的工作量，但是仍需要进行扩展才能适应特定程序。
 
